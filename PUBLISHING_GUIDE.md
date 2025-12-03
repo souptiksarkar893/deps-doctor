@@ -1,6 +1,6 @@
-# Publishing Guide for dep-doctor
+# Publishing Guide for deps-doctor
 
-This guide will walk you through publishing `dep-doctor` to npm.
+This guide will walk you through publishing `deps-doctor` to npm.
 
 ## Pre-Publishing Checklist
 
@@ -43,12 +43,12 @@ Update these fields in `package.json`:
   "author": "Your Name <your.email@example.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/dep-doctor.git"
+    "url": "git+https://github.com/YOUR_USERNAME/deps-doctor.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/dep-doctor/issues"
+    "url": "https://github.com/YOUR_USERNAME/deps-doctor/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/dep-doctor#readme"
+  "homepage": "https://github.com/YOUR_USERNAME/deps-doctor#readme"
 }
 ```
 
@@ -104,29 +104,29 @@ Review the output carefully. Make sure:
 npm publish --access public
 ```
 
-Note: Use `--access public` if your package name is scoped (e.g., `@yourusername/dep-doctor`)
+Note: Use `--access public` if your package name is scoped (e.g., `@yourusername/deps-doctor`)
 
 **Expected output:**
 ```
-+ dep-doctor@0.1.0
++ deps-doctor@0.1.0
 ```
 
 ### Step 6: Verify Publication
 
 1. **Check on npm:**
-   - Go to https://www.npmjs.com/package/dep-doctor
+   - Go to https://www.npmjs.com/package/deps-doctor
    - Your package should appear within seconds
 
 2. **Test installation:**
    ```bash
    # In a different directory
-   npx dep-doctor --version
+   npx deps-doctor --version
    ```
 
 3. **Test global installation:**
    ```bash
-   npm install -g dep-doctor
-   dep-doctor --version
+   npm install -g deps-doctor
+   deps-doctor --version
    ```
 
 ### Step 7: Create Git Repository
@@ -145,7 +145,7 @@ git commit -m "Initial release v0.1.0"
 
 # Create GitHub repository (on github.com)
 # Then connect local to remote:
-git remote add origin https://github.com/YOUR_USERNAME/dep-doctor.git
+git remote add origin https://github.com/YOUR_USERNAME/deps-doctor.git
 
 # Push
 git branch -M main
@@ -166,7 +166,7 @@ git push --tags
    ```markdown
    ## 🎉 First Release!
    
-   dep-doctor automatically detects and fixes missing Node.js dependencies.
+   deps-doctor automatically detects and fixes missing Node.js dependencies.
    
    ### Features
    - 🔍 Scan projects for missing dependencies
@@ -176,16 +176,16 @@ git push --tags
    
    ### Installation
    ```bash
-   npm install -g dep-doctor
+   npm install -g deps-doctor
    ```
    
    ### Usage
    ```bash
-   dep-doctor scan
-   dep-doctor install
+   deps-doctor scan
+   deps-doctor install
    ```
    
-   See [README](https://github.com/YOUR_USERNAME/dep-doctor#readme) for full documentation.
+   See [README](https://github.com/YOUR_USERNAME/deps-doctor#readme) for full documentation.
    ```
 
 ## Post-Publishing Tasks
@@ -195,8 +195,8 @@ git push --tags
 Update README.md with actual badges:
 
 ```markdown
-[![npm version](https://img.shields.io/npm/v/dep-doctor.svg)](https://www.npmjs.com/package/dep-doctor)
-[![npm downloads](https://img.shields.io/npm/dm/dep-doctor.svg)](https://www.npmjs.com/package/dep-doctor)
+[![npm version](https://img.shields.io/npm/v/deps-doctor.svg)](https://www.npmjs.com/package/deps-doctor)
+[![npm downloads](https://img.shields.io/npm/dm/deps-doctor.svg)](https://www.npmjs.com/package/deps-doctor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ```
 
@@ -214,7 +214,7 @@ Update README.md with actual badges:
 
 Template:
 ```
-Title: "I built dep-doctor - automatically fix 'Cannot find module' errors"
+Title: "I built deps-doctor - automatically fix 'Cannot find module' errors"
 
 I got tired of seeing "Cannot find module" errors, so I built a tool that 
 automatically scans your code and installs missing dependencies.
@@ -225,7 +225,7 @@ Features:
 - Auto-installs missing packages
 - Works with npm, yarn, and pnpm
 
-Try it: npx dep-doctor scan
+Try it: npx deps-doctor scan
 
 Feedback welcome! [GitHub link]
 ```
@@ -319,7 +319,7 @@ git push && git push --tags
 
 Track these metrics:
 
-- **npm downloads:** https://www.npmjs.com/package/dep-doctor
+- **npm downloads:** https://www.npmjs.com/package/deps-doctor
 - **GitHub stars:** Watch your repository
 - **Issues/Questions:** Respond within 24-48 hours
 - **Dependencies:** Keep them updated

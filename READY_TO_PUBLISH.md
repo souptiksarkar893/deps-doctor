@@ -1,4 +1,4 @@
-# ✅ Pre-Publish Checklist - dep-doctor
+# ✅ Pre-Publish Checklist - deps-doctor
 
 ## Final Quality Checks - All Passed! ✅
 
@@ -9,7 +9,7 @@
 - ✅ **Only essential files included** - 11 files total
 
 ### Repository Information  
-- ✅ **GitHub repository created** - https://github.com/souptiksarkar893/dep-doctor.git
+- ✅ **GitHub repository created** - https://github.com/souptiksarkar893/deps-doctor.git
 - ✅ **package.json updated** - Author: Souptik Sarkar
 - ✅ **All URLs updated** - Repository, bugs, homepage
 - ✅ **README updated** - All links point to correct repo
@@ -46,11 +46,11 @@ Total: 49KB unpacked, 13.8KB compressed
 ```
 
 ### Package Configuration ✅
-- ✅ **Name**: dep-doctor
+- ✅ **Name**: deps-doctor
 - ✅ **Version**: 0.1.0 (beta release)
 - ✅ **Author**: Souptik Sarkar <souptiksarkar893@gmail.com>
 - ✅ **License**: MIT
-- ✅ **Repository**: https://github.com/souptiksarkar893/dep-doctor.git
+- ✅ **Repository**: https://github.com/souptiksarkar893/deps-doctor.git
 - ✅ **Keywords**: 13 keywords for npm search optimization
 - ✅ **Node.js**: >=14.0.0
 - ✅ **bin**: ./bin/cli.js configured
@@ -80,7 +80,7 @@ npm publish --dry-run
 npm publish --access public
 
 # 5. Verify publication
-npx dep-doctor@0.1.0 --version
+npx deps-doctor@0.1.0 --version
 ```
 
 ### After Publishing
@@ -91,7 +91,7 @@ git init
 git add .
 git commit -m "Initial release v0.1.0"
 git branch -M main
-git remote add origin https://github.com/souptiksarkar893/dep-doctor.git
+git remote add origin https://github.com/souptiksarkar893/deps-doctor.git
 git push -u origin main
 
 # 2. Create version tag
@@ -99,7 +99,7 @@ git tag v0.1.0
 git push --tags
 
 # 3. Create GitHub release
-# Go to: https://github.com/souptiksarkar893/dep-doctor/releases/new
+# Go to: https://github.com/souptiksarkar893/deps-doctor/releases/new
 # Tag: v0.1.0
 # Title: v0.1.0 - Initial Release
 ```
@@ -108,7 +108,7 @@ git push --tags
 
 | Metric | Value |
 |--------|-------|
-| Package Name | dep-doctor |
+| Package Name | deps-doctor |
 | Version | 0.1.0 |
 | Size (unpacked) | 49.0 kB |
 | Size (tarball) | 13.8 kB |
@@ -121,7 +121,7 @@ git push --tags
 
 ## 🎯 What This Package Does
 
-**dep-doctor** automatically:
+**deps-doctor** automatically:
 1. Scans your JavaScript/TypeScript project
 2. Detects all import/require statements using AST parsing
 3. Compares found dependencies against package.json
@@ -132,8 +132,8 @@ git push --tags
 ## 📝 Post-Publishing Tasks
 
 ### Immediate (Day 1)
-- [ ] Verify package on npmjs.com/package/dep-doctor
-- [ ] Test installation: `npm install -g dep-doctor`
+- [ ] Verify package on npmjs.com/package/deps-doctor
+- [ ] Test installation: `npm install -g deps-doctor`
 - [ ] Update GitHub README with npm badge
 - [ ] Create GitHub release with notes
 - [ ] Tweet about the launch
@@ -151,9 +151,9 @@ git push --tags
 
 ## 🔗 Important Links
 
-- **npm**: https://www.npmjs.com/package/dep-doctor (after publishing)
-- **GitHub**: https://github.com/souptiksarkar893/dep-doctor
-- **Issues**: https://github.com/souptiksarkar893/dep-doctor/issues
+- **npm**: https://www.npmjs.com/package/deps-doctor (after publishing)
+- **GitHub**: https://github.com/souptiksarkar893/deps-doctor
+- **Issues**: https://github.com/souptiksarkar893/deps-doctor/issues
 
 ## ⚡ Quick Test
 
@@ -161,15 +161,15 @@ After publishing, test immediately:
 
 ```bash
 # Test global install
-npm install -g dep-doctor
-dep-doctor --version
+npm install -g deps-doctor
+deps-doctor --version
 
 # Test npx
-npx dep-doctor --version
+npx deps-doctor --version
 
 # Test in a project
 cd /path/to/test/project
-dep-doctor scan
+deps-doctor scan
 ```
 
 ## 🎉 Everything is Ready!

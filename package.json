@@ -1,10 +1,10 @@
 {
-  "name": "@souptik_sarkar/dep-doctor",
-  "version": "0.1.1",
+  "name": "deps-doctor",
+  "version": "0.1.0",
   "description": "Automatically detect and fix missing Node.js dependencies by scanning your codebase",
   "main": "src/index.js",
   "bin": {
-    "dep-doctor": "./bin/cli.js",
+    "deps-doctor": "./bin/cli.js",
     "depdoc": "./bin/cli.js"
   },
   "scripts": {
@@ -34,12 +34,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/souptiksarkar893/dep-doctor.git"
+    "url": "https://github.com/souptiksarkar893/deps-doctor.git"
   },
   "bugs": {
-    "url": "https://github.com/souptiksarkar893/dep-doctor/issues"
+    "url": "https://github.com/souptiksarkar893/deps-doctor/issues"
   },
-  "homepage": "https://github.com/souptiksarkar893/dep-doctor#readme",
+  "homepage": "https://github.com/souptiksarkar893/deps-doctor#readme",
   "engines": {
     "node": ">=14.0.0"
   },

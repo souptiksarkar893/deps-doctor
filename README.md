@@ -1,10 +1,10 @@
-# 🩺 dep-doctor
+# 🩺 deps-doctor
 
 > Automatically detect and fix missing Node.js dependencies by scanning your codebase
 
-[![npm version](https://img.shields.io/npm/v/dep-doctor.svg)](https://www.npmjs.com/package/dep-doctor)
+[![npm version](https://img.shields.io/npm/v/deps-doctor.svg)](https://www.npmjs.com/package/deps-doctor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/dep-doctor.svg)](https://nodejs.org)
+[![Node.js Version](https://img.shields.io/node/v/deps-doctor.svg)](https://nodejs.org)
 
 ## 🤔 The Problem
 
@@ -18,19 +18,19 @@ Error: Cannot find module '@babel/parser'
 
 You pull a repository, start coding, and suddenly realize dependencies are missing. Or worse, you import a package, forget to install it, and discover the error much later.
 
-**dep-doctor** solves this by automatically scanning your code, detecting missing dependencies, and installing them for you!
+**deps-doctor** solves this by automatically scanning your code, detecting missing dependencies, and installing them for you!
 
 ## ✨ The Solution
 
 ```bash
 # Scan your project for missing dependencies
-npx dep-doctor scan
+npx deps-doctor scan
 
 # Automatically install all missing dependencies
-npx dep-doctor install
+npx deps-doctor install
 
 # Find unused dependencies
-npx dep-doctor unused
+npx deps-doctor unused
 ```
 
 ## 🚀 Features
@@ -49,27 +49,27 @@ npx dep-doctor unused
 ### Global Installation (Recommended)
 
 ```bash
-npm install -g dep-doctor
+npm install -g deps-doctor
 ```
 
 Then use it anywhere:
 
 ```bash
-dep-doctor scan
-dep-doctor install
+deps-doctor scan
+deps-doctor install
 ```
 
 ### No Installation (Using npx)
 
 ```bash
-npx dep-doctor scan
-npx dep-doctor install
+npx deps-doctor scan
+npx deps-doctor install
 ```
 
 ### Local Installation
 
 ```bash
-npm install --save-dev dep-doctor
+npm install --save-dev deps-doctor
 ```
 
 Then add to `package.json` scripts:
@@ -77,8 +77,8 @@ Then add to `package.json` scripts:
 ```json
 {
   "scripts": {
-    "check-deps": "dep-doctor scan",
-    "fix-deps": "dep-doctor install"
+    "check-deps": "deps-doctor scan",
+    "fix-deps": "deps-doctor install"
   }
 }
 ```
@@ -90,7 +90,7 @@ Then add to `package.json` scripts:
 Scan your project and get a report of missing dependencies:
 
 ```bash
-dep-doctor scan
+deps-doctor scan
 ```
 
 **Output:**
@@ -115,7 +115,7 @@ dep-doctor scan
      Used in 1 file(s)
 
 💡 To install missing dependencies, run:
-   dep-doctor install
+   deps-doctor install
 ```
 
 ### Scan with Verbose Output
@@ -123,7 +123,7 @@ dep-doctor scan
 See exactly where each dependency is used:
 
 ```bash
-dep-doctor scan --verbose
+deps-doctor scan --verbose
 ```
 
 **Output:**
@@ -142,13 +142,13 @@ dep-doctor scan --verbose
 Scan and automatically install all missing dependencies:
 
 ```bash
-dep-doctor install
+deps-doctor install
 ```
 
 Or use the alias:
 
 ```bash
-dep-doctor fix
+deps-doctor fix
 ```
 
 **Output:**
@@ -166,13 +166,13 @@ Using: npm
 ### Install as Dev Dependencies
 
 ```bash
-dep-doctor install --save-dev
+deps-doctor install --save-dev
 ```
 
 Or shorter:
 
 ```bash
-dep-doctor install -D
+deps-doctor install -D
 ```
 
 ### Dry Run
@@ -180,7 +180,7 @@ dep-doctor install -D
 See what would be installed without actually installing:
 
 ```bash
-dep-doctor install --dry-run
+deps-doctor install --dry-run
 ```
 
 ### Find Unused Dependencies
@@ -188,7 +188,7 @@ dep-doctor install --dry-run
 Find dependencies that are installed but never imported:
 
 ```bash
-dep-doctor unused
+deps-doctor unused
 ```
 
 **Output:**
@@ -207,20 +207,20 @@ dep-doctor unused
 ### Scan Specific Directory
 
 ```bash
-dep-doctor scan --path ./my-project
-dep-doctor install --path ./my-project
+deps-doctor scan --path ./my-project
+deps-doctor install --path ./my-project
 ```
 
 ### Ignore Additional Patterns
 
 ```bash
-dep-doctor scan --ignore "**/*.test.js" "**/*.spec.js"
+deps-doctor scan --ignore "**/*.test.js" "**/*.spec.js"
 ```
 
 ### Don't Respect .gitignore
 
 ```bash
-dep-doctor scan --no-gitignore
+deps-doctor scan --no-gitignore
 ```
 
 ## 🎯 Use Cases
@@ -229,7 +229,7 @@ dep-doctor scan --no-gitignore
 
 ```bash
 git pull origin main
-dep-doctor install
+deps-doctor install
 ```
 
 Automatically install any new dependencies added by teammates.
@@ -237,7 +237,7 @@ Automatically install any new dependencies added by teammates.
 ### 2. Before Committing
 
 ```bash
-dep-doctor scan
+deps-doctor scan
 git commit -m "Add new feature"
 ```
 
@@ -247,7 +247,7 @@ Make sure all dependencies are properly installed.
 
 ```bash
 # Find and remove unused dependencies
-dep-doctor unused
+deps-doctor unused
 npm uninstall unused-package-1 unused-package-2
 ```
 
@@ -257,7 +257,7 @@ Add to your `.github/workflows/ci.yml`:
 
 ```yaml
 - name: Check dependencies
-  run: npx dep-doctor scan
+  run: npx deps-doctor scan
 ```
 
 ### 5. Pre-commit Hook
@@ -268,7 +268,7 @@ Using husky:
 {
   "husky": {
     "hooks": {
-      "pre-commit": "dep-doctor scan"
+      "pre-commit": "deps-doctor scan"
     }
   }
 }
@@ -292,7 +292,7 @@ Using husky:
 
 ## 🎨 CLI Commands
 
-### `dep-doctor scan`
+### `deps-doctor scan`
 
 Scan project and report missing dependencies.
 
@@ -302,7 +302,7 @@ Scan project and report missing dependencies.
 - `--ignore <patterns...>` - Additional patterns to ignore
 - `--no-gitignore` - Do not respect .gitignore
 
-### `dep-doctor install` (alias: `fix`)
+### `deps-doctor install` (alias: `fix`)
 
 Scan and automatically install missing dependencies.
 
@@ -313,7 +313,7 @@ Scan and automatically install missing dependencies.
 - `--ignore <patterns...>` - Additional patterns to ignore
 - `--no-gitignore` - Do not respect .gitignore
 
-### `dep-doctor unused`
+### `deps-doctor unused`
 
 Find dependencies that are installed but not used.
 
@@ -322,7 +322,7 @@ Find dependencies that are installed but not used.
 
 ## 📋 Supported Import Patterns
 
-dep-doctor recognizes all common import patterns:
+deps-doctor recognizes all common import patterns:
 
 ```javascript
 // ES6 Imports
@@ -353,7 +353,7 @@ const map = require('lodash/map');
 
 ## ⚙️ Configuration
 
-dep-doctor works with zero configuration, but you can customize behavior using CLI flags.
+deps-doctor works with zero configuration, but you can customize behavior using CLI flags.
 
 ### Ignoring Files
 
@@ -368,12 +368,12 @@ dist/
 Or use `--ignore` flag:
 
 ```bash
-dep-doctor scan --ignore "**/*.test.js" "build/**"
+deps-doctor scan --ignore "**/*.test.js" "build/**"
 ```
 
 ### Package Manager
 
-dep-doctor automatically detects your package manager:
+deps-doctor automatically detects your package manager:
 
 - `npm` - if `package-lock.json` exists
 - `yarn` - if `yarn.lock` exists
@@ -387,8 +387,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ```bash
 # Clone the repository
-git clone https://github.com/souptiksarkar893/dep-doctor.git
-cd dep-doctor
+git clone https://github.com/souptiksarkar893/deps-doctor.git
+cd deps-doctor
 
 # Install dependencies
 npm install
@@ -430,16 +430,16 @@ MIT © [Souptik Sarkar](https://github.com/souptiksarkar893)
 
 ## 🔗 Links
 
-- [npm Package](https://www.npmjs.com/package/dep-doctor)
-- [GitHub Repository](https://github.com/souptiksarkar893/dep-doctor)
-- [Issue Tracker](https://github.com/souptiksarkar893/dep-doctor/issues)
-- [Changelog](https://github.com/souptiksarkar893/dep-doctor/blob/main/CHANGELOG.md)
+- [npm Package](https://www.npmjs.com/package/deps-doctor)
+- [GitHub Repository](https://github.com/souptiksarkar893/deps-doctor)
+- [Issue Tracker](https://github.com/souptiksarkar893/deps-doctor/issues)
+- [Changelog](https://github.com/souptiksarkar893/deps-doctor/blob/main/CHANGELOG.md)
 
 ## ❓ FAQ
 
-### Why use dep-doctor instead of npm install?
+### Why use deps-doctor instead of npm install?
 
-dep-doctor helps you **discover** missing dependencies by scanning your code. It's useful when:
+deps-doctor helps you **discover** missing dependencies by scanning your code. It's useful when:
 - You forgot to save a dependency after installing
 - You imported a package but never installed it
 - You pulled code from someone who forgot to commit package.json changes
@@ -447,7 +447,7 @@ dep-doctor helps you **discover** missing dependencies by scanning your code. It
 
 ### Does it work with TypeScript?
 
-Yes! dep-doctor fully supports TypeScript files (`.ts`, `.tsx`).
+Yes! deps-doctor fully supports TypeScript files (`.ts`, `.tsx`).
 
 ### Does it work with monorepos?
 
@@ -455,7 +455,7 @@ Yes! Point it to any directory with a `package.json`.
 
 ### Will it break my project?
 
-No. dep-doctor only:
+No. deps-doctor only:
 1. **Reads** your code to find imports
 2. **Reads** your package.json
 3. **Installs** packages using your package manager (just like running `npm install` manually)
@@ -469,14 +469,14 @@ const pkg = 'lodash';
 require(pkg); // Won't be detected
 ```
 
-dep-doctor only detects static imports (string literals). Dynamic requires with variables can't be reliably detected.
+deps-doctor only detects static imports (string literals). Dynamic requires with variables can't be reliably detected.
 
 ### Can I use this in CI/CD?
 
 Yes! Add to your workflow:
 
 ```bash
-npx dep-doctor scan
+npx deps-doctor scan
 ```
 
 This will fail if missing dependencies are found.
@@ -485,4 +485,4 @@ This will fail if missing dependencies are found.
 
 **Made with ❤️ by developers, for developers**
 
-If dep-doctor saved you time, please give it a ⭐ on GitHub!
+If deps-doctor saved you time, please give it a ⭐ on GitHub!

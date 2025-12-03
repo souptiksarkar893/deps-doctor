@@ -1,6 +1,6 @@
-# Contributing to dep-doctor
+# Contributing to deps-doctor
 
-First off, thank you for considering contributing to dep-doctor! It's people like you that make dep-doctor such a great tool.
+First off, thank you for considering contributing to deps-doctor! It's people like you that make deps-doctor such a great tool.
 
 ## Code of Conduct
 
@@ -52,8 +52,8 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/dep-doctor.git
-cd dep-doctor
+git clone https://github.com/YOUR_USERNAME/deps-doctor.git
+cd deps-doctor
 
 # Install dependencies
 npm install
@@ -84,8 +84,8 @@ npm link
 
 # Test in another project
 cd /path/to/test/project
-dep-doctor scan
-dep-doctor install --dry-run
+deps-doctor scan
+deps-doctor install --dry-run
 ```
 
 ### Automated Tests
@@ -104,7 +104,7 @@ npm run test:watch
 ## Project Structure
 
 ```
-dep-doctor/
+deps-doctor/
 ├── bin/
 │   └── cli.js          # CLI entry point
 ├── src/

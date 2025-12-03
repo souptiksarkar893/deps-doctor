@@ -106,17 +106,17 @@
    {
      "author": "YOUR_NAME <your.email@example.com>",
      "repository": {
-       "url": "git+https://github.com/YOUR_USERNAME/dep-doctor.git"
+       "url": "git+https://github.com/YOUR_USERNAME/deps-doctor.git"
      },
      "bugs": {
-       "url": "https://github.com/YOUR_USERNAME/dep-doctor/issues"
+       "url": "https://github.com/YOUR_USERNAME/deps-doctor/issues"
      },
-     "homepage": "https://github.com/YOUR_USERNAME/dep-doctor#readme"
+     "homepage": "https://github.com/YOUR_USERNAME/deps-doctor#readme"
    }
    ```
 
 2. **Create GitHub Repository:**
-   - Go to github.com and create new repository named "dep-doctor"
+   - Go to github.com and create new repository named "deps-doctor"
    - Make it public
    - Don't initialize with README (we already have one)
 
@@ -125,9 +125,9 @@
    cd "c:\Users\SOUPTIK SARKAR\Desktop\Projects\n_pack"
    git init
    git add .
-   git commit -m "Initial commit - dep-doctor v0.1.0"
+   git commit -m "Initial commit - deps-doctor v0.1.0"
    git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/dep-doctor.git
+   git remote add origin https://github.com/YOUR_USERNAME/deps-doctor.git
    git push -u origin main
    git tag v0.1.0
    git push --tags
@@ -141,8 +141,8 @@
 
 5. **Update README badges** with actual links:
    ```markdown
-   [![npm version](https://img.shields.io/npm/v/dep-doctor.svg)](https://www.npmjs.com/package/dep-doctor)
-   [![GitHub](https://img.shields.io/github/stars/YOUR_USERNAME/dep-doctor)](https://github.com/YOUR_USERNAME/dep-doctor)
+   [![npm version](https://img.shields.io/npm/v/deps-doctor.svg)](https://www.npmjs.com/package/deps-doctor)
+   [![GitHub](https://img.shields.io/github/stars/YOUR_USERNAME/deps-doctor)](https://github.com/YOUR_USERNAME/deps-doctor)
    ```
 
 ### Publishing Steps:
@@ -167,12 +167,12 @@ npm publish --dry-run
 npm publish --access public
 
 # 6. Verify it worked
-npx dep-doctor --version
+npx deps-doctor --version
 ```
 
 ## 📦 Package Features Summary
 
-**What dep-doctor does:**
+**What deps-doctor does:**
 - ✅ Scans JavaScript/TypeScript files
 - ✅ Detects all import/require statements
 - ✅ Compares against package.json
@@ -216,7 +216,7 @@ npx dep-doctor --version
 - [  ] Post on r/webdev
 
 ### Week 2: Content Marketing
-- [  ] Write Dev.to article: "How I Built dep-doctor"
+- [  ] Write Dev.to article: "How I Built deps-doctor"
 - [  ] Submit to JavaScript Weekly newsletter
 - [  ] Submit to Node Weekly newsletter
 - [  ] Create demo GIF/video
@@ -230,17 +230,17 @@ npx dep-doctor --version
 ## 🔗 Useful Links
 
 **Package Details:**
-- Package name: `dep-doctor`
+- Package name: `deps-doctor`
 - Version: `0.1.0` (beta)
 - License: MIT
 - Repository: (to be created on GitHub)
 
 **npm Commands:**
 ```bash
-npm install -g dep-doctor       # Global install
-npx dep-doctor scan              # Run without installing
-dep-doctor install               # Auto-fix dependencies
-dep-doctor unused                # Find unused packages
+npm install -g deps-doctor       # Global install
+npx deps-doctor scan              # Run without installing
+deps-doctor install               # Auto-fix dependencies
+deps-doctor unused                # Find unused packages
 ```
 
 **Documentation Files:**
@@ -264,7 +264,7 @@ npm run format            # Format code
 # Testing locally
 npm link                  # Link package globally
 node bin/cli.js scan      # Test CLI directly
-dep-doctor --version      # Test linked command
+deps-doctor --version      # Test linked command
 
 # Publishing
 npm login                 # Login to npm

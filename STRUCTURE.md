@@ -1,7 +1,7 @@
 # 📁 Complete Project Structure
 
 ```
-dep-doctor/
+deps-doctor/
 │
 ├── 📂 bin/
 │   └── cli.js                    # CLI entry point with all commands
@@ -179,7 +179,7 @@ Total: 24 tracked files
 When published to npm, the package will include:
 
 ```
-dep-doctor@0.1.0
+deps-doctor@0.1.0
 ├── bin/cli.js
 ├── src/
 │   ├── index.js

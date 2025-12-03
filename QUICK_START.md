@@ -1,41 +1,41 @@
-# 🚀 Quick Start Guide - dep-doctor
+# 🚀 Quick Start Guide - deps-doctor
 
-Get up and running with dep-doctor in under 2 minutes!
+Get up and running with deps-doctor in under 2 minutes!
 
 ## Installation
 
 ### Option 1: No Installation Required (Recommended for First Try)
 
 ```bash
-npx dep-doctor scan
+npx deps-doctor scan
 ```
 
-This runs dep-doctor without installing it globally.
+This runs deps-doctor without installing it globally.
 
 ### Option 2: Global Installation
 
 ```bash
-npm install -g dep-doctor
+npm install -g deps-doctor
 ```
 
 Then use it anywhere:
 ```bash
-dep-doctor scan
-dep-doctor install
+deps-doctor scan
+deps-doctor install
 ```
 
 ### Option 3: Project-Specific Installation
 
 ```bash
-npm install --save-dev dep-doctor
+npm install --save-dev deps-doctor
 ```
 
 Add to package.json:
 ```json
 {
   "scripts": {
-    "check-deps": "dep-doctor scan",
-    "fix-deps": "dep-doctor install"
+    "check-deps": "deps-doctor scan",
+    "fix-deps": "deps-doctor install"
   }
 }
 ```
@@ -51,7 +51,7 @@ cd /path/to/your/project
 
 Run a scan:
 ```bash
-dep-doctor scan
+deps-doctor scan
 ```
 
 **Output:**
@@ -74,7 +74,7 @@ dep-doctor scan
 
 If missing dependencies are found:
 ```bash
-dep-doctor install
+deps-doctor install
 ```
 
 **Output:**
@@ -91,7 +91,7 @@ dep-doctor install
 
 Find packages you're not using:
 ```bash
-dep-doctor unused
+deps-doctor unused
 ```
 
 ## Common Workflows
@@ -100,13 +100,13 @@ dep-doctor unused
 
 ```bash
 git pull origin main
-dep-doctor install
+deps-doctor install
 ```
 
 ### Before Committing
 
 ```bash
-dep-doctor scan
+deps-doctor scan
 # Fix any issues
 git commit -m "Your message"
 ```
@@ -114,7 +114,7 @@ git commit -m "Your message"
 ### Clean Up Unused Packages
 
 ```bash
-dep-doctor unused
+deps-doctor unused
 # Review the list
 npm uninstall package1 package2 ...
 ```
@@ -123,26 +123,26 @@ npm uninstall package1 package2 ...
 
 | Command | Description | Example |
 |---------|-------------|---------|
-| `scan` | Check for missing dependencies | `dep-doctor scan` |
-| `install` | Install missing dependencies | `dep-doctor install` |
-| `fix` | Alias for install | `dep-doctor fix` |
-| `unused` | Find unused dependencies | `dep-doctor unused` |
+| `scan` | Check for missing dependencies | `deps-doctor scan` |
+| `install` | Install missing dependencies | `deps-doctor install` |
+| `fix` | Alias for install | `deps-doctor fix` |
+| `unused` | Find unused dependencies | `deps-doctor unused` |
 
 ## Useful Flags
 
 | Flag | Description | Example |
 |------|-------------|---------|
-| `-v, --verbose` | Show file locations | `dep-doctor scan -v` |
-| `-D, --save-dev` | Install as devDependencies | `dep-doctor install -D` |
-| `--dry-run` | Preview without installing | `dep-doctor install --dry-run` |
-| `-p, --path <path>` | Scan specific directory | `dep-doctor scan -p ./src` |
-| `--ignore <patterns>` | Ignore file patterns | `dep-doctor scan --ignore "*.test.js"` |
+| `-v, --verbose` | Show file locations | `deps-doctor scan -v` |
+| `-D, --save-dev` | Install as devDependencies | `deps-doctor install -D` |
+| `--dry-run` | Preview without installing | `deps-doctor install --dry-run` |
+| `-p, --path <path>` | Scan specific directory | `deps-doctor scan -p ./src` |
+| `--ignore <patterns>` | Ignore file patterns | `deps-doctor scan --ignore "*.test.js"` |
 
 ## Examples
 
 ### Example 1: Verbose Scan
 ```bash
-dep-doctor scan --verbose
+deps-doctor scan --verbose
 ```
 
 Shows exactly where each dependency is used:
@@ -158,7 +158,7 @@ Shows exactly where each dependency is used:
 
 ### Example 2: Dry Run Installation
 ```bash
-dep-doctor install --dry-run
+deps-doctor install --dry-run
 ```
 
 Preview what would be installed:
@@ -171,26 +171,26 @@ Preview what would be installed:
 
 ### Example 3: Install as Dev Dependencies
 ```bash
-dep-doctor install --save-dev
+deps-doctor install --save-dev
 ```
 
 Installs packages to `devDependencies` section of package.json.
 
 ### Example 4: Scan Specific Directory
 ```bash
-dep-doctor scan --path ./backend
+deps-doctor scan --path ./backend
 ```
 
 Only scans the `backend` directory.
 
 ### Example 5: Ignore Test Files
 ```bash
-dep-doctor scan --ignore "**/*.test.js" "**/*.spec.js"
+deps-doctor scan --ignore "**/*.test.js" "**/*.spec.js"
 ```
 
 Excludes test files from the scan.
 
-## What dep-doctor Detects
+## What deps-doctor Detects
 
 ✅ **Supported Import Styles:**
 ```javascript
@@ -249,9 +249,9 @@ export { map } from 'lodash';
 ```json
 {
   "scripts": {
-    "pretest": "dep-doctor scan",
-    "postinstall": "dep-doctor scan",
-    "clean": "dep-doctor unused"
+    "pretest": "deps-doctor scan",
+    "postinstall": "deps-doctor scan",
+    "clean": "deps-doctor unused"
   }
 }
 ```
@@ -261,7 +261,7 @@ export { map } from 'lodash';
 {
   "husky": {
     "hooks": {
-      "pre-commit": "dep-doctor scan"
+      "pre-commit": "deps-doctor scan"
     }
   }
 }
@@ -270,24 +270,24 @@ export { map } from 'lodash';
 ### With GitHub Actions
 ```yaml
 - name: Check dependencies
-  run: npx dep-doctor scan
+  run: npx deps-doctor scan
 ```
 
 ## Next Steps
 
 - Read the full [README](README.md) for advanced usage
 - Check out [CONTRIBUTING](CONTRIBUTING.md) to contribute
-- Report issues on [GitHub](https://github.com/yourusername/dep-doctor/issues)
+- Report issues on [GitHub](https://github.com/yourusername/deps-doctor/issues)
 
 ## Get Help
 
 - 📖 [Full Documentation](README.md)
-- 🐛 [Report a Bug](https://github.com/yourusername/dep-doctor/issues)
-- 💬 [Ask a Question](https://github.com/yourusername/dep-doctor/discussions)
-- ⭐ [Star on GitHub](https://github.com/yourusername/dep-doctor)
+- 🐛 [Report a Bug](https://github.com/yourusername/deps-doctor/issues)
+- 💬 [Ask a Question](https://github.com/yourusername/deps-doctor/discussions)
+- ⭐ [Star on GitHub](https://github.com/yourusername/deps-doctor)
 
 ---
 
 **Happy coding! 🎉**
 
-If dep-doctor helped you, please consider giving it a ⭐ on GitHub!
+If deps-doctor helped you, please consider giving it a ⭐ on GitHub!

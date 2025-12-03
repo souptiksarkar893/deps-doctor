@@ -3,10 +3,10 @@
 ## ✅ ALL CHECKS PASSED
 
 ### Package Details
-- **Name**: dep-doctor
+- **Name**: deps-doctor
 - **Version**: 0.1.0
 - **Author**: Souptik Sarkar <souptiksarkar893@gmail.com>
-- **Repository**: https://github.com/souptiksarkar893/dep-doctor.git
+- **Repository**: https://github.com/souptiksarkar893/deps-doctor.git
 - **License**: MIT
 
 ### Quality Metrics
@@ -19,7 +19,7 @@
 ### What Will Be Published (Verified via dry-run)
 
 ```
-📦 dep-doctor@0.1.0 - 13.8 KB
+📦 deps-doctor@0.1.0 - 13.8 KB
 ├── bin/cli.js (8.2KB) - CLI entry point
 ├── src/
 │   ├── analyzer.js (4.1KB)
@@ -54,10 +54,10 @@ npm publish --access public
 ### Step 1: Verify on npm (within 1 minute)
 ```bash
 # Check the package page
-https://www.npmjs.com/package/dep-doctor
+https://www.npmjs.com/package/deps-doctor
 
 # Test installation
-npx dep-doctor@0.1.0 --version
+npx deps-doctor@0.1.0 --version
 ```
 
 ### Step 2: Push to GitHub
@@ -66,14 +66,14 @@ git init
 git add .
 git commit -m "Initial release v0.1.0"
 git branch -M main
-git remote add origin https://github.com/souptiksarkar893/dep-doctor.git
+git remote add origin https://github.com/souptiksarkar893/deps-doctor.git
 git push -u origin main
 git tag v0.1.0
 git push --tags
 ```
 
 ### Step 3: Create GitHub Release
-1. Go to: https://github.com/souptiksarkar893/dep-doctor/releases/new
+1. Go to: https://github.com/souptiksarkar893/deps-doctor/releases/new
 2. Choose tag: v0.1.0
 3. Release title: "v0.1.0 - Initial Release"
 4. Add description (use CHANGELOG.md content)
@@ -81,8 +81,8 @@ git push --tags
 ### Step 4: Update README Badges (on GitHub)
 After publishing, the npm badge will work automatically:
 ```markdown
-[![npm version](https://img.shields.io/npm/v/dep-doctor.svg)](https://www.npmjs.com/package/dep-doctor)
-[![npm downloads](https://img.shields.io/npm/dm/dep-doctor.svg)](https://www.npmjs.com/package/dep-doctor)
+[![npm version](https://img.shields.io/npm/v/deps-doctor.svg)](https://www.npmjs.com/package/deps-doctor)
+[![npm downloads](https://img.shields.io/npm/dm/deps-doctor.svg)](https://www.npmjs.com/package/deps-doctor)
 ```
 
 ## 🎯 Package Features
@@ -96,9 +96,9 @@ After publishing, the npm badge will work automatically:
 - ✅ Beautiful CLI with colors and spinners
 
 **Commands:**
-- `dep-doctor scan` - Report missing dependencies
-- `dep-doctor install` - Auto-install missing packages
-- `dep-doctor unused` - Find unused dependencies
+- `deps-doctor scan` - Report missing dependencies
+- `deps-doctor install` - Auto-install missing packages
+- `deps-doctor unused` - Find unused dependencies
 
 ## 📊 Expected Impact
 
