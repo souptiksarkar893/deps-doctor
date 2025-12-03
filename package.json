@@ -4,7 +4,8 @@
   "description": "Automatically detect and fix missing Node.js dependencies by scanning your codebase",
   "main": "src/index.js",
   "bin": {
-    "dep-doctor": "./bin/cli.js"
+    "dep-doctor": "./bin/cli.js",
+    "depdoc": "./bin/cli.js"
   },
   "scripts": {
     "test": "jest",
