@@ -1,0 +1,67 @@
+{
+  "name": "@souptik_sarkar/dep-doctor",
+  "version": "0.1.0",
+  "description": "Automatically detect and fix missing Node.js dependencies by scanning your codebase",
+  "main": "src/index.js",
+  "bin": {
+    "dep-doctor": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ bin/ test/",
+    "lint:fix": "eslint src/ bin/ test/ --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\""
+  },
+  "keywords": [
+    "dependencies",
+    "npm",
+    "diagnosis",
+    "missing-modules",
+    "package-manager",
+    "dependency-management",
+    "cannot-find-module",
+    "module-not-found",
+    "auto-install",
+    "package-json",
+    "nodejs",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Souptik Sarkar <souptiksarkar893@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souptiksarkar893/dep-doctor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/souptiksarkar893/dep-doctor/issues"
+  },
+  "homepage": "https://github.com/souptiksarkar893/dep-doctor#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "dependencies": {
+    "@babel/parser": "^7.28.5",
+    "@babel/traverse": "^7.28.5",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.3.2",
+    "glob": "^10.5.0",
+    "ignore": "^7.0.5",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "jest": "^30.2.0",
+    "prettier": "^3.7.3"
+  }
+}

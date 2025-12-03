@@ -1,0 +1,33 @@
+# Source files
+test/
+*.test.js
+coverage/
+
+# Development files
+.git/
+.github/
+.vscode/
+.idea/
+
+# Extra documentation files (keep only README.md, LICENSE, CHANGELOG.md)
+PUBLISHING_GUIDE.md
+PROJECT_STATUS.md
+STRUCTURE.md
+QUICK_START.md
+CONTRIBUTING.md
+
+# Config files
+.eslintrc.js
+.prettierrc
+.editorconfig
+jest.config.js
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# Misc
+.DS_Store
