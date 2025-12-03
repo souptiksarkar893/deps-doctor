@@ -1,6 +1,6 @@
 {
   "name": "deps-doctor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatically detect and fix missing Node.js dependencies by scanning your codebase",
   "main": "src/index.js",
   "bin": {

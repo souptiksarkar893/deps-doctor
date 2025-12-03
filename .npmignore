@@ -9,12 +9,19 @@ coverage/
 .vscode/
 .idea/
 
-# Extra documentation files (keep only README.md, LICENSE, CHANGELOG.md)
+# Extra documentation files (keep only README.md, LICENSE, CHANGELOG.md, CONTRIBUTING.md)
+FINAL_STATUS.md
 PUBLISHING_GUIDE.md
 PROJECT_STATUS.md
 STRUCTURE.md
 QUICK_START.md
-CONTRIBUTING.md
+READY_TO_PUBLISH.md
+REBRANDING_SUMMARY.md
+*.md
+!README.md
+!LICENSE.md
+!CHANGELOG.md
+!CONTRIBUTING.md
 
 # Config files
 .eslintrc.js
